@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"
+      integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <h1 class="text-bg-danger text-center">Admin Page</h1>
+    <h1 class="text-sm-start p-lg-3">Add Products</h1>
+
+    <div
+      class="container text-center form-control align-items-start"
+      id="container"
+    >
+      <form action="#" id="forminput" onsubmit="AddDataItems(event)">
+        <div class="row">
+          <div class="col-sm text-md-start">
+            <label for="catinput">Category</label>
+            <select select="form-select" id="catinput" class="form-control">
+              <option selected>Select Product</option>
+              <option value="candy">candy</option>
+              <option value="pasta">pasta</option>
+              <option value="cockokola">cockokola</option>
+            </select>
+          </div>
+
+          <div class="col-sm text-md-start">
+            <label for="nameinput">Name</label>
+            <input
+              type="text"
+              id="nameinput"
+              class="form-control"
+              placeholder="enter name"
+            />
+          </div>
+          <div class="col-sm text-md-start">
+            <label for="quantinput">Quantity</label>
+            <input
+              type="number"
+              class="form-control"
+              id="quantinput"
+              placeholder="Quantity"
+            />
+          </div>
+          <div class="col-sm text-md-start">
+            <label for="priceInput">Price</label>
+            <input
+              type="text"
+              class="form-control"
+              id="priceInput"
+              placeholder="enter price"
+            />
+          </div>
+          <div class="col-sm text-md-start">
+            <label for="imageinput">AddImage</label>
+            <input
+              type="file"
+              class="form-control"
+              id="imageinput"
+              accept="image/*"
+            />
+          </div>
+
+          <div class="text-md-start">
+            <input
+              type="submit"
+              class="btn btn-primary float-start mt-3"
+              id="btninput"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <table class="table mt-3 p-10" id="tableinput">
+        <thead>
+          <tr>
+            <th>Product image</th>
+            <th >Item Name</th>
+            <th >Description</th>
+            <th>Quantity</th>
+            <th >Price</th>
+          </tr>
+        </thead>
+          
+      </table>
+      
+    </div>
+  </body>
+ 
+</html>
