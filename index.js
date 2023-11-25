@@ -5,9 +5,9 @@ function AddDataItems(event) {
     let name = document.getElementById("nameinput").value;
     let price = document.getElementById("priceInput").value;
     let Quantity = document.getElementById("quantinput").value;
-    //   console.log(category);
-    //   console.log(name);
-    //   console.log(price);
+    // console.log(category);
+    // console.log(name);
+    // console.log(price);
 
 
     let imageFile = Image.files[0];
@@ -33,7 +33,7 @@ function AddDataItems(event) {
 window.addEventListener("DOMContentLoaded", () => {
     axios
         .get(
-            "https://crudcrud.com/api/b8abe0b485d046c5a0c973f64fe08d26/ProductData"
+            "https://crudcrud.com/api/c32b3bf1fc9b4afea4b809e242cf9470/ProductData"
         )
         .then((res) => {
             for (var i = 0; i < res.data.length; i++) {
@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
 function postData(Product_Data) {
     axios
         .post(
-            "https://crudcrud.com/api/b8abe0b485d046c5a0c973f64fe08d26/ProductData",
+            "https://crudcrud.com/api/c32b3bf1fc9b4afea4b809e242cf9470/ProductData",
             Product_Data
         )
         .then((res) => {
@@ -179,7 +179,7 @@ function DisplayData(ProductData) {
 }
 function deleteProduct(UserId) {
     axios
-        .delete(`https://crudcrud.com/api/b8abe0b485d046c5a0c973f64fe08d26/ProductData/${UserId}`)
+        .delete(`https://crudcrud.com/api/c32b3bf1fc9b4afea4b809e242cf9470/ProductData/${UserId}`)
         .then((res) => console.log('Deleted Object product', UserId))
         .catch((err) => console.log(err))
 }
@@ -187,7 +187,7 @@ function deleteProduct(UserId) {
 //when you click manager btn and increase quantity wiht price and put data inside the api crudcrud
 function PutUpdateQuantPriceManger(UserId, Image, category, name, updatedQuantity, updatedPrice) {
     axios
-        .put(`https://crudcrud.com/api/b8abe0b485d046c5a0c973f64fe08d26/ProductData/${UserId}`, {
+        .put(`https://crudcrud.com/api/c32b3bf1fc9b4afea4b809e242cf9470/ProductData/${UserId}`, {
             Image: Image,
             category: category,
             name: name,
